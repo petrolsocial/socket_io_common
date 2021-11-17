@@ -14,6 +14,7 @@ import 'dart:convert';
 import 'package:logging/logging.dart';
 import 'package:socket_io_common/socket_io_common.dart';
 import 'package:socket_io_common/src/util/event_emitter.dart';
+import 'dart:typed_data';
 
 import 'is_binary.dart';
 
@@ -315,7 +316,11 @@ class BinaryReconstructor {
    * @api private
    */
   takeBinaryData(binData) {
-    this.buffers.add(binData);
+    if (binData is ByteBuffer) {
+      this.buffers.add(binData.asUint8List(0, binData.lengthInBytes));
+    } else {
+      this.buffers.add(binData);
+    }
     if (this.buffers.length == this.reconPack!['attachments']) {
       // done with buffer list
       var packet = Binary.reconstructPacket(
