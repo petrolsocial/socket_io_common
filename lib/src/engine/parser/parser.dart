@@ -127,7 +127,7 @@ class PacketParser {
   static mapBinary(data, binaryType) {
     final isBuffer = data is ByteBuffer;
     if (binaryType == 'arraybuffer') {
-      return isBuffer ? Uint8List.fromList(data) : data;
+      return isBuffer ? data.asUint8List(0, data.lengthInBytes) : data;
     }
     return data;
   }
