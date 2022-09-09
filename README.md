@@ -1,5 +1,9 @@
 # socket_io_common
 Socket.io common parser library for Dart 2
 
-## Contributors
-- Thanks [@Curvel](https://github.com/Curvel) for https://github.com/rikulo/socket_io_common/pull/4
+### Version info:
+
+| socket_io_common | Socket.io Server
+-------------------|----------------
+`v0.9.*` ~ `v1.* ` | `v2.*`
+`v2.*`             | `v3.*`
