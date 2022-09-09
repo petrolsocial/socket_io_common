@@ -1,3 +1,8 @@
+## 2.0.0
+
+**Features:**
+* [socket_io_common#5](https://github.com/rikulo/socket_io_common/pull/5) Added listening any event functionality
+
 ## 2.0.0-beta.1-nullsafety.1
 
 **Bug fix:**
@@ -16,7 +21,7 @@ Support null safety on 2.0.0-beta
 
 ## 2.0.0-beta.0
 
-** Features: **
+**Features:**
 * [socket_io_common#3](https://github.com/rikulo/socket_io_common/issues/3) Support Socket.io server v3.0
 
 ## 1.0.0-nullsafety.1
